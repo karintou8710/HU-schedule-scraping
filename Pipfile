@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+selenium = "*"
+chromedriver-binary = "==93.0.4577.63.0"
+tqdm = "*"
+click = "*"
+jsonstreams = "*"
+black = "*"
+
+[scripts]
+scraping = "python main.py"
+format = "bash -c 'black . && isort .'"
+check = "black . --check"
+
+[dev-packages]
+isort = "*"
+
+[requires]
+python_version = "3.8"
